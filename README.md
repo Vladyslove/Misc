@@ -1,0 +1,1 @@
+This repository consist different self-study tasks, some practise in using any tools, frameworks, APIs etc.
