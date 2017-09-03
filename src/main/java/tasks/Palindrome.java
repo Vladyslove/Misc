@@ -35,7 +35,7 @@ public class Palindrome {
         }
     }
 
-    private static boolean isSimpleNumber(long number) {
+    public static boolean isSimpleNumber(long number) {
         int dividersCount = 0;
         for (int i = 1; i <= number; i++) {
             if (number % i == 0) {
@@ -62,7 +62,7 @@ public class Palindrome {
         }
     }
 
-    private static boolean isPalindrome(String resultOfMultiplicationOfSimpleNumbers) {
+    public static boolean isPalindrome(String resultOfMultiplicationOfSimpleNumbers) {
         char firstCh;
         char lastCh;
         int size = resultOfMultiplicationOfSimpleNumbers.length();

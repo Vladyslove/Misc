@@ -1,7 +1,7 @@
 import org.junit.Test;
 
-import static tasks.palindrome.Palindrome.isPalindrome;
-import static tasks.palindrome.Palindrome.isSimpleNumber;
+import static tasks.Palindrome.isPalindrome;
+import static tasks.Palindrome.isSimpleNumber;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
