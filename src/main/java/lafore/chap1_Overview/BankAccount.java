@@ -29,9 +29,12 @@ class BankApp {
     public static void main(String[] args) {
         BankAccount bankAccount = new BankAccount(99.99);
 
+        System.out.println("Before transactions balance: ");
+        bankAccount.display();
+
         bankAccount.deposit(11.11);
         bankAccount.withdraw(22.22);
-        System.out.println("After transactionsf");
+        System.out.println("After transactions balance: ");
         bankAccount.display();
     }
 
