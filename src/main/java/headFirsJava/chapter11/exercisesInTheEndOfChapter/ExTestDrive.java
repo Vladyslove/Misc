@@ -1,4 +1,4 @@
-package headFirsJava.chapter13.exercisesInTheEndOfChapter;
+package headFirsJava.chapter11.exercisesInTheEndOfChapter;
 
 /**
  * Created by User on 06.09.2017.

@@ -1,4 +1,4 @@
-package headFirsJava.chapter13;
+package headFirsJava.chapter11;
 
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;

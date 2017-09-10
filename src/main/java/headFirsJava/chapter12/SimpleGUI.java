@@ -1,4 +1,4 @@
-package headFirsJava.chapter14;
+package headFirsJava.chapter12;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -24,7 +24,6 @@ public class SimpleGUI implements ActionListener{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(250,250);
         frame.setVisible(true);
-
     }
 
     @Override

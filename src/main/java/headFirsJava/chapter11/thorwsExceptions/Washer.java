@@ -1,4 +1,4 @@
-package headFirsJava.chapter13.thorwsExceptions;
+package headFirsJava.chapter11.thorwsExceptions;
 
 /**
  * Created by User on 04.09.2017.

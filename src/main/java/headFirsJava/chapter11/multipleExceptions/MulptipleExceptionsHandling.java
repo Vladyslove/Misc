@@ -1,4 +1,4 @@
-package headFirsJava.chapter13.multipleExceptions;
+package headFirsJava.chapter11.multipleExceptions;
 
 /**
  * Created by User on 04.09.2017.
