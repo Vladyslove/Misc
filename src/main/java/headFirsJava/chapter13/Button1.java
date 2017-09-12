@@ -23,7 +23,9 @@ public class Button1 {
 
     private void go1() {
         JFrame frame = new JFrame();
-        JButton button = new JButton("There is no spoon...");
+        JButton button = new JButton("Click this");
+        Font bigFont = new Font("serif", Font.BOLD, 35);
+        button.setFont(bigFont);
         frame.getContentPane().add(BorderLayout.NORTH, button);
         frame.setSize(200,200);
         frame.setVisible(true);
