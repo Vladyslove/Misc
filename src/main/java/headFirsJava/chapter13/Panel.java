@@ -17,6 +17,8 @@ public class Panel {
         JPanel panel = new JPanel();
         panel.setBackground(Color.darkGray);
 
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+
         JButton button = new JButton("shock me");
         JButton button2 = new JButton("bliss");
 
