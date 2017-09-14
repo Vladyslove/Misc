@@ -11,7 +11,22 @@ public class Button1 {
         Button1 gui = new Button1();
 //        gui.go();
 //        gui.go1();
-        gui.go2();
+//        gui.go2();
+        gui.go3();
+    }
+
+    private void go3() {
+        JFrame frame = new JFrame();
+
+        JTextField field = new JTextField(20);
+        frame.getContentPane().add(field);
+        System.out.println(field.getText());
+        field.setText("anything");
+        field.selectAll();
+        field.requestFocus();
+
+        frame.setSize(300,300);
+        frame.setVisible(true);
     }
 
     private void go2() {
