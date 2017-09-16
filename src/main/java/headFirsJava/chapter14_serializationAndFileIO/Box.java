@@ -26,6 +26,8 @@ public class Box implements Serializable {
         try {
             FileOutputStream fs = new FileOutputStream("src/main/resources/headFirstJava/chapter14/foo.ser");
             ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(myBox);
+            os.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
