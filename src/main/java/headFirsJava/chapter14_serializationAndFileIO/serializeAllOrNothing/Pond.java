@@ -11,14 +11,26 @@ public class Pond implements Serializable {
 
     public static void main(String[] args) {
         Pond myPond = new Pond();
+        Object object;
 
-        try (FileOutputStream fs = new FileOutputStream("Pond.ser")) {
+        try (FileOutputStream fs = new FileOutputStream("src/main/resources/headFirstJava/chapter14/Pond.ser")) {
             ObjectOutputStream os = new ObjectOutputStream(fs);
             os.writeObject(myPond);
             os.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            ObjectInputStream is = new ObjectInputStream(new FileInputStream
+                    ("src/main/resources/headFirstJava/chapter14/Pond.ser"));
+            Pond duckRestore = (Pond) is.readObject();
+            System.out.println("duckRestore type is:" + duckRestore.getClass());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
