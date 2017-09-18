@@ -24,7 +24,15 @@ public class QuizCardBuilder {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+
         }
+
+     private class NewMenuListener implements ActionListener {
+
+         @Override
+         public void actionPerformed(ActionEvent e) {
+             
+         }
+     }
     }
 }
