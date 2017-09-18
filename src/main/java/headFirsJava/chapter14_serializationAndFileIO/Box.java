@@ -33,5 +33,19 @@ public class Box implements Serializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/headFirstJava/chapter14/foo.ser")) {
+           ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            Object one = objectInputStream.readObject();
+            myBox = (Box) one;
+            objectInputStream.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
