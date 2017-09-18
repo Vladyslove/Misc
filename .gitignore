@@ -17,6 +17,8 @@ gradle-app.setting
 .idea
 *.iml
 *.jpg
+*.txt
+*.ser
 *.png
 *.jpeg
 *.bmp
