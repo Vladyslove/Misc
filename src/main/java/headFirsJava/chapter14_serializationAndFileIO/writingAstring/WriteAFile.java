@@ -1,5 +1,6 @@
 package headFirsJava.chapter14_serializationAndFileIO.writingAstring;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -8,11 +9,26 @@ import java.io.IOException;
  */
 public class WriteAFile {
     public static void main(String[] args) {
-        try (FileWriter writer = new FileWriter("src/main/resources/headFirstJava/chapter14/Foo.txt")) {
-            writer.write("hello, foo!");
+        try (FileWriter writer = new FileWriter("src/main/resources/headFirstJava/chapter14/MyCode.txt")) {
+            writer.write("hello, MyCode!");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        File f = new File("src/main/resources/headFirstJava/chapter14/MyCode.txt");
+        File dir = new File("src/main/resources/headFirstJava/chapter14/DirCreation");
+        dir.mkdir();
+        File innerDir = new File("src/main/resources/headFirstJava/chapter14/DirCreation/OneLevelDipperDir");
+        innerDir.mkdir();
+
+        if (dir.isDirectory()) {
+            String[] dirContents = dir.list();
+            for (int i = 0; i < dirContents.length; i++) {
+                System.out.println(dirContents[i]);
+            }
+        }
+
+        System.out.println(f.getAbsolutePath());
+        System.out.println(dir.getAbsolutePath());
     }
 }
