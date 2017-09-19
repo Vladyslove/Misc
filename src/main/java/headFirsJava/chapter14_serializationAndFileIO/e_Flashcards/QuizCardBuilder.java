@@ -24,6 +24,7 @@ public class QuizCardBuilder {
         builder.go();
     }
 
+
     public void go() {
         frame = new JFrame("Quiz Card Bulder");
         JPanel mainPanel = new JPanel();
