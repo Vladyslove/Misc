@@ -1,4 +1,4 @@
-package headFirsJava.chapter14_serializationAndFileIO.writingAstring;
+package headFirsJava.chapter14_serializationAndFileIO.writingAndReadingFile;
 
 import java.io.File;
 import java.io.FileWriter;
