@@ -39,7 +39,7 @@ public class QuizCardPlayer {
         JScrollPane qScroller = new JScrollPane(display);
         qScroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         qScroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        nextButton = new JButton("Show answer");
+        nextButton = new JButton("Show questions");
         mainPanel.add(qScroller);
         mainPanel.add(nextButton);
         nextButton.addActionListener(new NextCardListener());
@@ -113,7 +113,7 @@ public class QuizCardPlayer {
         currentCard = cardList.get(currentCardIndex);
         currentCardIndex++;
         display.setText(currentCard.getQuestion());
-//        display.setText("Show Answer");
+        nextButton.setText("Show Answer");
         isShowAnswer = true;
     }
 }
