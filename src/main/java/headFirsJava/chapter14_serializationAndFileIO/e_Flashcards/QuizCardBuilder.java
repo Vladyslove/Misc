@@ -21,11 +21,11 @@ public class QuizCardBuilder {
 
     public static void main(String[] args) {
         QuizCardBuilder builder = new QuizCardBuilder();
-        builder.go();
+        builder.go1();
     }
 
 
-    public void go() {
+    public void go1() {
         frame = new JFrame("Quiz Card Bulder");
         JPanel mainPanel = new JPanel();
         Font bigFont = new Font("sanserif", Font.BOLD, 25);
@@ -57,7 +57,7 @@ public class QuizCardBuilder {
         mainPanel.add(qLabel);
         mainPanel.add(qScroller);
         mainPanel.add(aLabel);
-        mainPanel.add(qScroller);
+        mainPanel.add(aScroller);
         mainPanel.add(nextButton);
         nextButton.addActionListener(new NextCardListener());
         JMenuBar menuBar = new JMenuBar();
@@ -92,9 +92,11 @@ public class QuizCardBuilder {
         public void actionPerformed(ActionEvent e) {
             QuizCard card = new QuizCard(question.getText(), answer.getText());
             cardList.add(card);
-            clearCard();
-        }
 
+            JFileChooser fileSave = new JFileChooser();
+            fileSave.showSaveDialog(frame);
+            saveFile(fileSave.getSelectedFile());
+        }
     }
 
     public class NewMenuListener implements ActionListener {
@@ -114,10 +116,12 @@ public class QuizCardBuilder {
     }
 
     private void saveFile(File file) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+
             for (QuizCard card: cardList) {
                 writer.write(card.getQuestion() + "/");
-                writer.write(card.getAnswer() + "/");
+                writer.write(card.getAnswer() + "/" + "\n");
             }
             writer.close();
         } catch (IOException e) {

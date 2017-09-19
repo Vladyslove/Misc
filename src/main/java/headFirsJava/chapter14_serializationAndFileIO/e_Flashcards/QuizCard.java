@@ -6,6 +6,7 @@ package headFirsJava.chapter14_serializationAndFileIO.e_Flashcards;
 public class QuizCard {
 
     private String answer;
+    private String question;
 
     public String getAnswer() {
         return answer;
@@ -14,8 +15,6 @@ public class QuizCard {
     public String getQuestion() {
         return question;
     }
-
-    private String question;
 
     public QuizCard(String a, String q) {
         this.answer = a;
