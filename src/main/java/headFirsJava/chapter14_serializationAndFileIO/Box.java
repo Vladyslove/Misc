@@ -35,7 +35,7 @@ public class Box implements Serializable {
         }
 
         try (FileInputStream fileInputStream = new FileInputStream("src/main/resources/headFirstJava/chapter14/foo.ser")) {
-           ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Object one = objectInputStream.readObject();
             myBox = (Box) one;
             objectInputStream.close();

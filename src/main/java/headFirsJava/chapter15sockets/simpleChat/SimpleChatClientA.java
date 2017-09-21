@@ -16,7 +16,6 @@ public class SimpleChatClientA {
     JTextField outgoing;
     PrintWriter writer;
     Socket sock;
-
     public void go() {
         JFrame frame = new JFrame("Ludicrously Simple Chat Client");
         JPanel mainPanel = new JPanel();
