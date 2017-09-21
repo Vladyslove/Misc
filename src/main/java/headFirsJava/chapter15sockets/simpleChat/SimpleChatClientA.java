@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 
@@ -31,7 +32,14 @@ public class SimpleChatClientA {
     }
 
     public void setUpNetworking() {
+        try {
+            sock = new Socket("127.0.0.1", 5000);
 
+            writer = new PrintWriter(sock.getOutputStream());
+            System.out.println("networking established");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public class SendButtonListener implements ActionListener {
