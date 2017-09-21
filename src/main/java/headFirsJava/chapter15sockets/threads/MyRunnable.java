@@ -1,4 +1,4 @@
-package headFirsJava.chapter15sockets.therads;
+package headFirsJava.chapter15sockets.threads;
 
 /**
  * Created by User on 21.09.2017.
