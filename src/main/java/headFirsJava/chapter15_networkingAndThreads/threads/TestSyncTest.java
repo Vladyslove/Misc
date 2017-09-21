@@ -16,11 +16,12 @@ class TestSync implements Runnable {
         }
     }
 
-    private void increment() {
+    private synchronized void increment() {
         int i = balance;
         balance = i + 1;
     }
 }
+
 public class TestSyncTest {
     public static void main(String[] args) {
         TestSync job = new TestSync();
