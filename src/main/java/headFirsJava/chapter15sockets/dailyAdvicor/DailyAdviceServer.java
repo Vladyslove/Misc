@@ -1,4 +1,4 @@
-package headFirsJava.chapter15sockets;
+package headFirsJava.chapter15sockets.dailyAdvicor;
 
 import java.io.IOException;
 import java.io.PrintWriter;
