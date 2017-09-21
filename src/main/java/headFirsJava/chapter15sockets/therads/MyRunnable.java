@@ -10,6 +10,12 @@ public class MyRunnable implements Runnable {
     }
 
     public void go() {
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         doMore();
     }
 
@@ -23,6 +29,7 @@ class ThreadTester {
         Runnable threadJob = new MyRunnable();
         Thread myThread = new Thread(threadJob);
         myThread.start();
+
         System.out.println("back in main");
     }
 }
