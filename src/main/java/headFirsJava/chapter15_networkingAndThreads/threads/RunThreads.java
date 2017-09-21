@@ -1,4 +1,4 @@
-package headFirsJava.chapter15sockets.threads;
+package headFirsJava.chapter15_networkingAndThreads.threads;
 
 public class RunThreads implements Runnable {
     public static void main(String[] args) {

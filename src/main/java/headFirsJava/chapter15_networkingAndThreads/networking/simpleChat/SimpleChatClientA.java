@@ -1,4 +1,4 @@
-package headFirsJava.chapter15sockets.simpleChat;
+package headFirsJava.chapter15_networkingAndThreads.networking.simpleChat;
 
 import javax.swing.*;
 import java.awt.*;
