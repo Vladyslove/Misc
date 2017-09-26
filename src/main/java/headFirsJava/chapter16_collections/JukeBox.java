@@ -9,7 +9,7 @@ import java.util.Collections;
  */
 public class JukeBox {
 
-    ArrayList<String> songList = new ArrayList<String>();
+    ArrayList<Song> songList = new ArrayList<Song>();
 
     public static void main(String[] args) {
         new JukeBox().go();
@@ -40,8 +40,8 @@ public class JukeBox {
 
     void addSong(String lineToParse) {
         String[] tokens = lineToParse.split("/");
-        songList.add(tokens[0]);
-
+        Song nextSong = new Song(tokens[0], tokens[1], tokens[2], tokens[3]);
+        songList.add(nextSong);
     }
 }
 
