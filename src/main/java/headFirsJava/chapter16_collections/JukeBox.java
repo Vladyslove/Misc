@@ -2,6 +2,7 @@ package headFirsJava.chapter16_collections;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by User on 27.09.2017.
@@ -17,6 +18,8 @@ public class JukeBox {
 
     public void go() {
         getSongs();
+        System.out.println(songList);
+        Collections.sort(songList);
         System.out.println(songList);
     }
 
