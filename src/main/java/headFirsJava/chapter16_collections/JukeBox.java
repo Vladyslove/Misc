@@ -1,5 +1,6 @@
 package headFirsJava.chapter16_collections;
 
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -20,6 +21,21 @@ public class JukeBox {
     }
 
     private void getSongs() {
+        File file = new File("SongList.txt");
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                addSong(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private void addSong(String line) {
+        
     }
 }
