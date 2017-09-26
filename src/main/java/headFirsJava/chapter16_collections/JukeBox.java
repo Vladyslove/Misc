@@ -15,14 +15,14 @@ public class JukeBox {
 
     }
 
-    private void go() {
+    public void go() {
         getSongs();
         System.out.println(songList);
     }
 
-    private void getSongs() {
-        File file = new File("SongList.txt");
+    void getSongs() {
         try {
+            File file = new File("src/main/resources/headFirstJava/chapter16/SongList.txt");
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = null;
             while ((line = reader.readLine()) != null) {
@@ -35,7 +35,9 @@ public class JukeBox {
         }
     }
 
-    private void addSong(String line) {
-        
+    void addSong(String lineToParse) {
+        String[] tokens = lineToParse.split("/");
+        songList.add(tokens[0]);
+
     }
 }
