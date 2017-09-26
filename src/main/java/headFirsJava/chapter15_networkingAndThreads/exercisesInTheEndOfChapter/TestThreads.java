@@ -32,7 +32,6 @@ class Accum  {
     }
 }
 
-
 class ThreadOne implements Runnable {
     Accum a = Accum.getAccum();
 
