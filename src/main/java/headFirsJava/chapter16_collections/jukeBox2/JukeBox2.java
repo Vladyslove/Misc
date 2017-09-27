@@ -1,4 +1,4 @@
-package headFirsJava.chapter16_collections;
+package headFirsJava.chapter16_collections.jukeBox2;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,20 +7,19 @@ import java.util.Collections;
 /**
  * Created by User on 27.09.2017.
  */
-public class JukeBox {
+public class JukeBox2 {
 
     ArrayList<Song> songList = new ArrayList<Song>();
 
     public static void main(String[] args) {
-        new JukeBox().go();
-
+        new JukeBox2().go();
     }
 
     public void go() {
         getSongs();
         System.out.println(songList);
         Collections.sort(songList);
-        System.out.println(songList );
+        System.out.println(songList);
     }
 
     void getSongs() {
