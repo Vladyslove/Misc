@@ -45,7 +45,7 @@ public class JukeBox {
     }
 }
 
-class Song {
+class Song implements Comparable <Song>{
     String title;
     String artist;
     String rating;
@@ -76,5 +76,10 @@ class Song {
 
     public String toString() {
         return title;
+    }
+
+    @Override
+    public int compareTo(Song s) {
+        return title.compareTo(s.getTitle());
     }
 }
