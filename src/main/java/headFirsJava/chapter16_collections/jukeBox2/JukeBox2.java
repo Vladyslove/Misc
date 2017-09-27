@@ -5,12 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-/**
- * Created by User on 27.09.2017.
- */
 public class JukeBox2 {
 
-    ArrayList<Song> songList = new ArrayList<Song>();
+    ArrayList<Song> songList = new ArrayList<>();
     public static void main(String[] args) {
         new JukeBox2().go();
     }
