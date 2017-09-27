@@ -1,15 +1,15 @@
-package headFirsJava.chapter16_collections.juxeBox3WithHashSet;
+package headFirsJava.chapter16_collections.jukeBox4WithTreeSet;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
+import java.util.TreeSet;
 
-public class JukeBox3 {
+public class JukeBox4 {
 
     ArrayList<Song> songList = new ArrayList<>();
     public static void main(String[] args) {
-        new JukeBox3().go();
+        new JukeBox4().go();
     }
 
     public void go() {
@@ -18,7 +18,7 @@ public class JukeBox3 {
         Collections.sort(songList);
         System.out.println(songList);
 
-        HashSet<Song> songSet = new HashSet<>();
+        TreeSet<Song> songSet = new TreeSet<Song>();
         songSet.addAll(songList);
         System.out.println(songSet);
 
@@ -52,14 +52,14 @@ class Song implements Comparable<Song>{
     String rating;
     String bpm;
 
-    /*public boolean equals (Object aSong) {
+    public boolean equals (Object aSong) {
         Song s = (Song) aSong;
         return getTitle().equals(s.getTitle());
     }
 
     public int hashCode() {
         return title.hashCode();
-    }*/
+    }
 
     public Song(String title, String artist, String rating, String bpm) {
         this.title = title;
@@ -94,4 +94,5 @@ class Song implements Comparable<Song>{
         return title.compareTo(s.getTitle());
     }
 }
+
 
