@@ -1,22 +1,15 @@
-package headFirsJava.chapter16_collections.jukeBox2;
+package headFirsJava.chapter16_collections.juxeBoxWithHashSet;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+import java.util.HashSet;
 
-public class JukeBox2 {
+public class JukeBox3 {
 
     ArrayList<Song> songList = new ArrayList<>();
     public static void main(String[] args) {
-        new JukeBox2().go();
-    }
-
-    class ArtistCompare implements Comparator<Song> {
-        @Override
-        public int compare(Song one, Song two) {
-            return one.getArtist().compareTo(two.getArtist());
-        }
+        new JukeBox3().go();
     }
 
     public void go() {
@@ -25,10 +18,10 @@ public class JukeBox2 {
         Collections.sort(songList);
         System.out.println(songList);
 
-        ArtistCompare artistCompare = new ArtistCompare();
-        Collections.sort(songList, artistCompare);
+        HashSet<Song> songSet = new HashSet<>();
+        songSet.addAll(songList);
+        System.out.println(songSet);
 
-        System.out.println(songList);
     }
 
     void getSongs() {
@@ -53,7 +46,7 @@ public class JukeBox2 {
     }
 }
 
-class Song implements Comparable <Song>{
+class Song implements Comparable<Song>{
     String title;
     String artist;
     String rating;
@@ -83,7 +76,7 @@ class Song implements Comparable <Song>{
     }
 
     public String toString() {
-        return title + ": " + artist;
+        return title;
     }
 
     @Override
@@ -91,3 +84,4 @@ class Song implements Comparable <Song>{
         return title.compareTo(s.getTitle());
     }
 }
+
