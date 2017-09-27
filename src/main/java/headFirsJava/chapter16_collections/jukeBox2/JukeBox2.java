@@ -3,6 +3,7 @@ package headFirsJava.chapter16_collections.jukeBox2;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Created by User on 27.09.2017.
@@ -10,9 +11,15 @@ import java.util.Collections;
 public class JukeBox2 {
 
     ArrayList<Song> songList = new ArrayList<Song>();
-
     public static void main(String[] args) {
         new JukeBox2().go();
+    }
+
+    class ArtistCompare implements Comparator<Song> {
+        @Override
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
     }
 
     public void go() {
