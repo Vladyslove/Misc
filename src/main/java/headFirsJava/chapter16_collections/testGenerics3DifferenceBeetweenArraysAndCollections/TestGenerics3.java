@@ -1,12 +1,5 @@
-package headFirsJava.chapter16_collections.testGenerics2WithCollections;
+package headFirsJava.chapter16_collections.testGenerics3DifferenceBeetweenArraysAndCollections;
 
-import headFirsJava.chapter12.exercisesInTheEndOfChapter.Animate;
-
-import java.util.ArrayList;
-
-/**
- * Created by User on 28.09.2017.
- */
 public class TestGenerics3 {
 
     public static void main(String[] args) {
@@ -22,7 +15,6 @@ public class TestGenerics3 {
             animals[0] = new Cat();
         }
     }
-}
 
 abstract class Animal {
     void eat() {
