@@ -27,7 +27,13 @@ public class TestGenerics2 {
 
     }
 
-    private void takeAnimals(ArrayList<Animal> animals) {
+    /*private void takeAnimals(ArrayList<? extends Animal> animals) {
+        for (Animal a: animals) {
+            a.eat();
+        }
+    }*/
+
+    private <T extends Animal> void takeAnimals (ArrayList<T> animals) {
         for (Animal a: animals) {
             a.eat();
         }
