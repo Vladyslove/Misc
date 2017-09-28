@@ -1,12 +1,12 @@
-package headFirsJava.chapter16_collections.testGenerics;
+package headFirsJava.chapter16_collections.testGenerics2WithCollections;
 
 /**
  * Created by User on 28.09.2017.
  */
-public class TestGenerics {
+public class TestGenerics2 {
 
     public static void main(String[] args) {
-        new TestGenerics().go();
+        new TestGenerics2().go();
     }
 
     private void go() {
