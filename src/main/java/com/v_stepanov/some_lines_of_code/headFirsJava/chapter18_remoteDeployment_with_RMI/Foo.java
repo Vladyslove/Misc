@@ -15,12 +15,13 @@ public class Foo {
         Foo f = new Foo();
         f.go();
     }
-    
+
 }
 
 class Bar {
     void doStuff() {
         // Method is doing smth
+        System.out.println("Hi I'm method doStuff");
     }
 
 }
