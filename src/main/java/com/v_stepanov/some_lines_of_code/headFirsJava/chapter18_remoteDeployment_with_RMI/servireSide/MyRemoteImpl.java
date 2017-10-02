@@ -9,4 +9,7 @@ public class MyRemoteImpl extends UnicastRemoteObject implements MyRemote{
     public String sayHello() {
         return null;
     }
+
+    public MyRemoteImpl() throws RemoteException {
+    }
 }
