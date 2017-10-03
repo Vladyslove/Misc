@@ -22,7 +22,5 @@ public class MyRemoteClient {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
-
-
     }
 }
