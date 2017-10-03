@@ -13,6 +13,8 @@ public class MyRemoteClient {
     private void go() {
         try {
             MyRemote service = (MyRemote) Naming.lookup("rmi:/127.0.0.1/Remote Hello");
+            String s = service.sayHello();
+
         } catch (NotBoundException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {
@@ -20,6 +22,7 @@ public class MyRemoteClient {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+
 
     }
 }
