@@ -2,6 +2,8 @@ package com.v_stepanov.some_lines_of_code.headFirsJava.chapter18_remoteDeploymen
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -67,5 +69,15 @@ public class ServiceBrowser {
             e.printStackTrace();
         }
         return services;
+    }
+
+    class MyListListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            Object selection = serviceList.getSelectedItem();
+            loadService(selection);
+
+        }
     }
 }
