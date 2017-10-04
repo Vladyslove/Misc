@@ -2,6 +2,9 @@ package com.v_stepanov.some_lines_of_code.headFirsJava.chapter18_remoteDeploymen
 
 import javax.swing.*;
 import java.awt.*;
+import java.net.MalformedURLException;
+import java.rmi.Naming;
+import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 /**
@@ -41,5 +44,22 @@ public class ServiceBrowser {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    Object[] getServicesList() {
+        Object obj = null;
+        Object[] services = null;
+
+        try {
+            obj = Naming.lookup("rmi:/127.0.0.1/ServiceServer");
+        } catch (NotBoundException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        server = (ServiceServer) obj;
+        return services;
     }
 }
