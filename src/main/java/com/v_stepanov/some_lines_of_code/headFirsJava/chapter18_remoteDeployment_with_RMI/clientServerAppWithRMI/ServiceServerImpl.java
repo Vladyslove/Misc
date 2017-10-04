@@ -1,5 +1,7 @@
 package com.v_stepanov.some_lines_of_code.headFirsJava.chapter18_remoteDeployment_with_RMI.clientServerAppWithRMI;
 
+import java.net.MalformedURLException;
+import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.HashMap;
@@ -33,4 +35,17 @@ public class ServiceServerImpl extends UnicastRemoteObject implements ServiceSer
         Service theService = (Service) serviceList.get(serviceKey);
         return theService;
     }
+
+    public static void main(String[] args) {
+        try {
+            Naming.rebind("ServiceServer", new ServiceServerImpl());
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Remote service is running");
+    }
+
+
 }
