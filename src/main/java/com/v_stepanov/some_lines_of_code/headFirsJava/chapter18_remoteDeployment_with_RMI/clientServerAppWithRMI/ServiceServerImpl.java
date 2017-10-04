@@ -30,6 +30,7 @@ public class ServiceServerImpl extends UnicastRemoteObject implements ServiceSer
 
     @Override
     public Service getService(Object serviceKey) throws RemoteException {
-        return null;
+        Service theService = (Service) serviceList.get(serviceKey);
+        return theService;
     }
 }
