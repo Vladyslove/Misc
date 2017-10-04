@@ -60,6 +60,12 @@ public class ServiceBrowser {
             e.printStackTrace();
         }
         server = (ServiceServer) obj;
+
+        try {
+            services = server.getServiceList ();
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
         return services;
     }
 }
