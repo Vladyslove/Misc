@@ -80,4 +80,8 @@ public class ServiceBrowser {
 
         }
     }
+
+    public static void main(String[] args) {
+        new ServiceBrowser().buildGUI();
+    }
 }
