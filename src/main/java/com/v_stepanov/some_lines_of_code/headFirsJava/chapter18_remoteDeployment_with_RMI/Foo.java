@@ -22,6 +22,7 @@ class Bar {
     void doStuff() {
         // Method is doing smth
         System.out.println("Hi I'm method doStuff");
+        System.out.println("Testing LF to CRLF replacing");
     }
 
 }
