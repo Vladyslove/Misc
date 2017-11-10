@@ -3,15 +3,23 @@ package com.v_stepanov.some_lines_of_code.designpatterns.stretegy;
 import com.v_stepanov.some_lines_of_code.designpatterns.stretegy.behavior.FlyBehavior;
 import com.v_stepanov.some_lines_of_code.designpatterns.stretegy.behavior.QuackBehavior;
 
-public class Duck {
+public abstract class Duck {
+    protected FlyBehavior flyBehavior;
+    protected QuackBehavior quackBehavior;
 
-    FlyBehavior flyBehavior;
-    QuackBehavior quackBehavior;
-    void perfromQuack() {
+    public Duck() {
+    }
+
+    public abstract void display();
+
+    void perfromFly() {
+        flyBehavior.fly();
+    }
+    public void perfromQuack() {
         quackBehavior.quack();
     }
-    void perfromFly() {}
-    void swim(){    }
-    protected void display(){    }
+    public void swim(){
+        System.out.println("All duck float, even decoys");
+    }
 
 }

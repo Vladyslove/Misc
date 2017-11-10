@@ -10,7 +10,7 @@ public class RubberDuck extends Duck implements QuackBehavior {
     }
 
     @Override
-    protected void display() {
+    public void display() {
 //        super.display();
     }
 }

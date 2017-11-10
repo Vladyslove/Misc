@@ -6,7 +6,7 @@ import com.v_stepanov.some_lines_of_code.designpatterns.stretegy.behavior.QuackB
 
 public class RedheadDuck extends Duck implements FlyBehavior, QuackBehavior {
     @Override
-    protected void display() {
+    public void display() {
 //        super.display();
     }
 
